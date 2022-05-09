@@ -1,0 +1,93 @@
+.help-block{
+    color: #dc3545!important;
+}
+@media print{
+    .no-print{display:none;}
+    .no-print-no{display:block;}
+}
+/*map kashqadaryo*/
+.map{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.map{
+    font-family: "Roboto", serif;
+}
+
+.map{
+    position: relative;
+    text-align: center;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 98%;
+    width: 100%;
+    fill: #0373c9;
+}
+path{
+    /*opacity: 0.4;*/
+    fill: #0373c9;
+    cursor: pointer;
+    transition: 0.3s;
+    stroke: #fff;
+    stroke-width: 1;
+}
+path:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+    transition-delay: 0.5s;
+}
+#mirishkor{}
+#kasbi{}
+#muborak{}
+#koson{}
+#chiroqchi{}
+#kitob{}
+#shahrisabz{}
+#yakkabaog{}
+#qamashi{}
+#qarshit{}
+#nishon{}
+#guzor{}
+#dehqanabot{}
+/*stroke="#fff"  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" fill="#009fdf" original="#009fdf" id="jqvmap1_to" class="jvectormap-region"*/
+/*stroke="#fff" stroke-width="1" stroke-opacity="1" fill="#0093ce" original="#0093ce" id="dehqanabot" class="dehqanabot"*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
