@@ -102,7 +102,7 @@
                                     <div class="collapse navbar-collapse text-uppercase" id="mainMenu">
                                         <ul class="navbar-nav mx-auto py-2 py-md-0">
                                             <li class="nav-item dropdown px-sm-4">
-                                                <a href="index" class="nav-link" style="color: white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Bosh sahifa</a>
+                                                <a href="index" class="nav-link" style="color: white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Test</a>
                                                 
                                             </li>
                                             <li class="nav-item dropdown px-sm-4">
