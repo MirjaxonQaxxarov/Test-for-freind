@@ -12,8 +12,8 @@ include_once "menu/menu.php";
                             <div class="row">
                                 <div class="col-md-12 col-12">
                                     <h3 class=" pt-3" align="center">Reyting</h3> 
-                                    <table class="table" style="background-color: #dff;">
-                                        <thead>
+                                    <table class="table" style="background-color: rgba(87,147,167,0.7);">
+                                        <thead >
                                             <tr>
                                                 <th>Rank</th>
                                                 <th>Username</th>
@@ -21,101 +21,20 @@ include_once "menu/menu.php";
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php
+                                            $fetch = Functions::MyQuery("SELECT login , ball FROM `users` ORDER BY ball DESC;");
+                                            $no=0;
+                                            foreach($fetch as $value){
+                                                $no++;
+                                                echo('
                                             <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
+                                                <td>'.$no.'</td>
+                                                <td><a style="color: #fff;" href="profile?uid='.$value['login'].'">@'.$value['login'].'</a></td>
+                                                <td>'.$value['ball'].'</td>
                                             </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="profile?uid=mcodeer">@mcodeer</a></td>
-                                                <td>122</td>
-                                            </tr>
+                                                ');
+                                            }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>

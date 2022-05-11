@@ -66,22 +66,17 @@
             </div>
         </section>
     </footer>
+    <script src="static/template0/js/jQuery.min.js"></script>
+    <script src="static/js/jquery-3.5.1.min.js"></script>
+    <script src="static/template0/js/src/popover.js"></script>
+    <script src="static/template0/js/bootstrap.js"></script>
+    <script src="static/js/js.cookie.js"></script>
+    <script src="static/js/custom.js"></script>
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
-    <script src="static/template0/js/jQuery.min.js"></script>
-    <script src="static/template0/js/src/popover.js"></script>
-    <script src="static/template0/js/bootstrap.js"></script>
-    <script src="static/js/jquery-3.5.1.min.js"></script>
-    <script src="static/js/responsivevoice.min.js"></script>
-    <script src="static/js/js.cookie.js"></script>
-    <script src="static/js/bvi-init.js"></script>
-    <script src="static/js/bvi.min.js"></script>
-    <script src="static/js/mistakes.js"></script>
-    <script src="static/js/map.js"></script>
-    <script src="static/js/custom.js"></script>
 </body>
 
 

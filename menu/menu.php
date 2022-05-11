@@ -1,3 +1,25 @@
+<?php 
+ini_set('display_errors', 1);
+
+ini_set('display_startup_errors', 1);
+
+error_reporting(E_ALL);
+
+session_start();
+$_SESSION['_csrf'] = md5(time());
+
+if(empty($_SESSION['keyuser'])){
+
+    $keyuser=rand(1000,9999);
+
+    $_SESSION['keyuser']=$keyuser;
+
+}
+include_once "config.php";
+
+$keyuser = $_SESSION['keyuser'];
+?>
+
 <!DOCTYPE html>
 <html lang="oz">
     
