@@ -6,6 +6,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
+$bkey = false;
+if (isset($_GET['_csrf']) and $_GET['_csrf'] == $_SESSION['_csrf']) 
+$bkey = true;
 $_SESSION['_csrf'] = md5(time());
 
 if(empty($_SESSION['keyuser'])){
@@ -80,9 +83,9 @@ $keyuser = $_SESSION['keyuser'];
                                 <div class="b">
                                     <form action="search" method="get" class="form-inline my-lg-0">
                                         <div class="df">
-                                            <input class="form-control mr-sm-2" name="q" type="text"
+                                            <input class="form-control mr-sm-2" name="query" type="text"
                                             placeholder="Foydalanuvchini izlash..." required="false">
-                                        
+                                            <input type="hidden" name="_csrf" value="<?=$_SESSION["_csrf"]?>">
                                             <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true" style="color: rgb(31, 31, 31); font-size: 1rem;"></i></button>
                                         </div>
                                     </form>
@@ -123,6 +126,22 @@ $keyuser = $_SESSION['keyuser'];
                                     </button>
                                     <div class="collapse navbar-collapse text-uppercase" id="mainMenu">
                                         <ul class="navbar-nav mx-auto py-2 py-md-0">
+                                            <?php
+
+                                                if (isset($_SESSION['rol'])&&$_SESSION['rol']=="admin") {
+                                                    echo('
+                                                        
+                                                    <li class="nav-item dropdown px-sm-4">
+                                                    <a href="addfan" class="nav-link" style="color: white;font-family:\'Lucida Sans\', \'Lucida Sans Regular\', \'Lucida Grande\', \'Lucida Sans Unicode\', Geneva, Verdana, sans-serif">Yangi fan</a>
+                                                    
+                                                    </li>
+                                                    <li class="nav-item dropdown px-sm-4">
+                                                    <a href="addtest" class="nav-link" style="color: white;font-family:\'Lucida Sans\', \'Lucida Sans Regular\', \'Lucida Grande\', \'Lucida Sans Unicode\', Geneva, Verdana, sans-serif">Yangi Test</a>
+                                                    
+                                                    </li>
+                                                    ');
+                                                }
+                                            ?>
                                             <li class="nav-item dropdown px-sm-4">
                                                 <a href="index" class="nav-link" style="color: white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Test</a>
                                                 

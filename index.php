@@ -1,7 +1,16 @@
 <?php
 include_once "menu/menu.php";
+
+if (!isset($_SESSION["rol"])) {
+
+    echo '<script>window.location.href = "login.php";</script>';
+    exit();
+
+}
+
+
 if (isset($_GET['fanid'])) {
-    $_SESSION['fanid'] = $_GET['fanid'];
+    $_SESSION['fanid'] = filter($_GET['fanid']);
 }
 ?>
 

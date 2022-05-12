@@ -11,13 +11,11 @@ include_once "menu/menu.php";
                         <div class="col-md-11 col-12 m-auto">
                             <div class="row">
                                 <div class="col-md-12 col-12">
-                                    <h3 class=" pt-3" align="center">Log in</h3>
+                                    <h3 class=" pt-3" align="center">Yangi fan</h3>
                                     <form id="form">
-                                        <input style="margin:auto; margin-top:1vh;" name="name" type="text" class="form-control col-6" placeholder="To`liq Ism">
-                                        <input style="margin:auto; margin-top:1vh;" name="login" type="text" class="form-control col-6" placeholder="Login">
-                                        <input style="margin:auto; margin-top:1vh;" name="password" type="text" class="form-control col-6" placeholder="Password">
-                                        <input type="hidden" name="_csrf"  value="<?=$_SESSION["_csrf"]?>">
-                                        <button style="margin-top:1vh; margin-left:48%" id="ok1" type="submit" class="btn btn-success">Register</button> <a  href="login">Menda account mavjud</a>
+                                        <input style="margin:auto; margin-top:1vh;" name="name" type="text" class="form-control col-6" placeholder="Fan nomi">
+                                       <input type="hidden" name="_csrf"  value="<?=$_SESSION["_csrf"]?>">
+                                        <button style="margin-top:1vh; margin-left:48%" id="ok1" type="submit" class="btn btn-success">yaratish</button> 
                                     </form>
                                 </div>
                             </div>
@@ -38,7 +36,7 @@ let submitBtn = document.getElementById('ok1');
   submitBtn.addEventListener("click", function submit(e) {
     e.preventDefault();
     $.ajax({
-      url: "addall?test1=<?=str_rot13("Remember me")?>&table=<?=str_rot13("users")?>&test2=<?=str_rot13("Login or  Password is wrong")?>&soni=<?=3*$keyuser?>",
+      url: "addall?test1=<?=str_rot13("Remember me")?>&table=<?=str_rot13("fan")?>&test2=<?=str_rot13("Login or  Password is wrong")?>&soni=<?=1*$keyuser?>",
       type: 'POST',
       processData: false,
       contentType: false,
@@ -49,7 +47,7 @@ let submitBtn = document.getElementById('ok1');
         if (obj.xatolik==0) {
           alert("Muvaffaqiyatli");
           setTimeout(() => {
-            location.href="login.php";
+            location.reload();
           }, 1000);
         } else {
           $('#_csrf').val(obj._csrf);

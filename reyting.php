@@ -22,17 +22,19 @@ include_once "menu/menu.php";
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $fetch = Functions::MyQuery("SELECT login , ball FROM `users` ORDER BY ball DESC;");
+                                            $fetch = Functions::MyQuery("SELECT login , ball, rol FROM users  order by ball desc;");
                                             $no=0;
                                             foreach($fetch as $value){
-                                                $no++;
-                                                echo('
-                                            <tr>
-                                                <td>'.$no.'</td>
-                                                <td><a style="color: #fff;" href="profile?uid='.$value['login'].'">@'.$value['login'].'</a></td>
-                                                <td>'.$value['ball'].'</td>
-                                            </tr>
-                                                ');
+                                                if($value['rol']=="user"){
+                                                    $no++;
+                                                    echo('
+                                                        <tr>
+                                                            <td>'.$no.'</td>
+                                                            <td><a style="color: #fff;" href="profile?uid='.$value['login'].'">@'.$value['login'].'</a></td>
+                                                            <td>'.$value['ball'].'</td>
+                                                        </tr>
+                                                    ');
+                                                }
                                             }
                                             ?>
                                         </tbody>
