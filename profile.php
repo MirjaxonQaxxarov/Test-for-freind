@@ -19,7 +19,7 @@ include_once "menu/menu.php";
                                         }elseif(isset($_SESSION['userid'])){
                                             $kuser = $_SESSION['userid'];
                                         }
-                                        else {echo '<script>window.location.href = "login.php";</script>';
+                                        else {echo '<script>window.location.href = "login.html";</script>';
                                             exit();
                                         }
                                         $fetch = Functions::MyQuery("SELECT * FROM users order by ball desc;");
@@ -38,7 +38,7 @@ include_once "menu/menu.php";
                                                     break;
                                                 }
                                                 if ($ind == 0) {
-                                                    echo '<script>window.location.href = "login.php";</script>';
+                                                    echo '<script>window.location.href = "login.html";</script>';
                                                     exit();
                                                 }
                                             }

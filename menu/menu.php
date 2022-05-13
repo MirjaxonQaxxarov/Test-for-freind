@@ -81,7 +81,7 @@ $keyuser = $_SESSION['keyuser'];
                         <div class="col-md-3 col-6 mt-2">
                             
                                 <div class="b">
-                                    <form action="search" method="get" class="form-inline my-lg-0">
+                                    <form action="search.html" method="get" class="form-inline my-lg-0">
                                         <div class="df">
                                             <input class="form-control mr-sm-2" name="query" type="text"
                                             placeholder="Foydalanuvchini izlash..." required="false">
@@ -132,26 +132,26 @@ $keyuser = $_SESSION['keyuser'];
                                                     echo('
                                                         
                                                     <li class="nav-item dropdown px-sm-4">
-                                                    <a href="addfan" class="nav-link" style="color: white;font-family:\'Lucida Sans\', \'Lucida Sans Regular\', \'Lucida Grande\', \'Lucida Sans Unicode\', Geneva, Verdana, sans-serif">Yangi fan</a>
+                                                    <a href="addfan.html" class="nav-link" style="color: white;font-family:\'Lucida Sans\', \'Lucida Sans Regular\', \'Lucida Grande\', \'Lucida Sans Unicode\', Geneva, Verdana, sans-serif">Yangi fan</a>
                                                     
                                                     </li>
                                                     <li class="nav-item dropdown px-sm-4">
-                                                    <a href="addtest" class="nav-link" style="color: white;font-family:\'Lucida Sans\', \'Lucida Sans Regular\', \'Lucida Grande\', \'Lucida Sans Unicode\', Geneva, Verdana, sans-serif">Yangi Test</a>
+                                                    <a href="addtest.html" class="nav-link" style="color: white;font-family:\'Lucida Sans\', \'Lucida Sans Regular\', \'Lucida Grande\', \'Lucida Sans Unicode\', Geneva, Verdana, sans-serif">Yangi Test</a>
                                                     
                                                     </li>
                                                     ');
                                                 }
                                             ?>
                                             <li class="nav-item dropdown px-sm-4">
-                                                <a href="index" class="nav-link" style="color: white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Test</a>
+                                                <a href="index.html" class="nav-link" style="color: white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Test</a>
                                                 
                                             </li>
                                             <li class="nav-item dropdown px-sm-4">
-                                                <a href="reyting" class="nav-link" style="color: white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Reyting</a>
+                                                <a href="reyting.html" class="nav-link" style="color: white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Reyting</a>
                                                 
                                             </li>
                                             <li class="nav-item dropdown px-sm-4">
-                                                <a href="profile" class="nav-link" style="color: white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Profile</a>
+                                                <a href="profile.html" class="nav-link" style="color: white;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Profile</a>
                                                 
                                             </li>
 

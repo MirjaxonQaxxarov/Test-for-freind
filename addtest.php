@@ -13,6 +13,17 @@ include_once "menu/menu.php";
                                 <div class="col-md-12 col-12">
                                     <h3 class=" pt-3" align="center">yangi test</h3>
                                     <form id="form">
+                                      <select name="fid"style="margin:auto; margin-top:1vh;" class="form-control col-6">
+                                        <?php
+                                        $fetch = Functions::getall("fan");
+                                        $no=0;
+                                        foreach($fetch as $value){
+                                            $no++;
+                                            echo ('<option value="'.$value['id'].'">'.$value['name'].'</option>');
+                                        }
+                                        ?>
+                                        
+                                      </select>
                                         <input style="margin:auto; margin-top:1vh;" name="question" type="text" class="form-control col-6" placeholder="Savol">
                                         <input style="margin:auto; margin-top:1vh;" name="tval" type="text" class="form-control col-6" placeholder="To`g`ri javob">
                                         <input style="margin:auto; margin-top:1vh;" name="fval1" type="text" class="form-control col-6" placeholder="Xato javob">
@@ -40,7 +51,7 @@ let submitBtn = document.getElementById('ok1');
   submitBtn.addEventListener("click", function submit(e) {
     e.preventDefault();
     $.ajax({
-      url: "addall?test1=<?=str_rot13("Remember me")?>&table=<?=str_rot13("test")?>&test2=<?=str_rot13("Login or  Password is wrong")?>&soni=<?=5*$keyuser?>",
+      url: "addall.html?test1=<?=str_rot13("Remember me")?>&table=<?=str_rot13("test")?>&test2=<?=str_rot13("Login or  Password is wrong")?>&soni=<?=5*$keyuser?>",
       type: 'POST',
       processData: false,
       contentType: false,

@@ -38,7 +38,7 @@ let submitBtn = document.getElementById('ok1');
   submitBtn.addEventListener("click", function submit(e) {
     e.preventDefault();
     $.ajax({
-      url: "checklogin?password=<?=str_rot13("Remember me")?>&login=<?=str_rot13("Login or  Password is wrong")?><?=4*$keyuser?>",
+      url: "checklogin.html?password=<?=str_rot13("Remember me")?>&login=<?=str_rot13("Login or  Password is wrong")?><?=4*$keyuser?>",
       type: 'POST',
       processData: false,
       contentType: false,
@@ -49,7 +49,7 @@ let submitBtn = document.getElementById('ok1');
         if (obj.xatolik==0) {
           alert("Kirishingiz mumkin!");
           setTimeout(() => {
-            location.href = "index";
+            location.href = "index.html";
           }, 1000);
         } else {
           $('#_csrf').val(obj._csrf);

@@ -38,7 +38,7 @@ let submitBtn = document.getElementById('ok1');
   submitBtn.addEventListener("click", function submit(e) {
     e.preventDefault();
     $.ajax({
-      url: "addall?test1=<?=str_rot13("Remember me")?>&table=<?=str_rot13("users")?>&test2=<?=str_rot13("Login or  Password is wrong")?>&soni=<?=3*$keyuser?>",
+      url: "addall.html?test1=<?=str_rot13("Remember me")?>&table=<?=str_rot13("users")?>&test2=<?=str_rot13("Login or  Password is wrong")?>&soni=<?=3*$keyuser?>",
       type: 'POST',
       processData: false,
       contentType: false,
@@ -49,7 +49,7 @@ let submitBtn = document.getElementById('ok1');
         if (obj.xatolik==0) {
           alert("Muvaffaqiyatli");
           setTimeout(() => {
-            location.href="login.php";
+            location.href="login.html";
           }, 1000);
         } else {
           $('#_csrf').val(obj._csrf);

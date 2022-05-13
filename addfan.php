@@ -36,7 +36,7 @@ let submitBtn = document.getElementById('ok1');
   submitBtn.addEventListener("click", function submit(e) {
     e.preventDefault();
     $.ajax({
-      url: "addall?test1=<?=str_rot13("Remember me")?>&table=<?=str_rot13("fan")?>&test2=<?=str_rot13("Login or  Password is wrong")?>&soni=<?=1*$keyuser?>",
+      url: "addall.html?test1=<?=str_rot13("Remember me")?>&table=<?=str_rot13("fan")?>&test2=<?=str_rot13("Login or  Password is wrong")?>&soni=<?=1*$keyuser?>",
       type: 'POST',
       processData: false,
       contentType: false,

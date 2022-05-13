@@ -30,7 +30,7 @@ include_once "menu/menu.php";
                                                     echo('
                                                         <tr>
                                                             <td>'.$no.'</td>
-                                                            <td><a style="color: #fff;" href="profile?uid='.$value['login'].'">@'.$value['login'].'</a></td>
+                                                            <td><a style="color: #fff;" href="profile.html?uid='.$value['login'].'">@'.$value['login'].'</a></td>
                                                             <td>'.$value['ball'].'</td>
                                                         </tr>
                                                     ');

@@ -2,21 +2,28 @@ ErrorDocument 404 /404.php
 
 ErrorDocument 500 /500.php
 
-RewriteEngine On
+# RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteCond %{REQUEST_FILENAME}.php -f
+# RewriteCond %{REQUEST_FILENAME}.php -f
 
-RewriteRule ^.*$ $0.php [L,QSA]
+# RewriteRule ^.*$ $0.php [L,QSA]
 
-RewriteCond %{THE_REQUEST} ([^\s]*)\.php(\?[^\s]*)?
+# RewriteCond %{THE_REQUEST} ([^\s]*)\.php(\?[^\s]*)?
 
-RewriteRule (.*) %1 [R=301,L]
+# RewriteRule (.*) %1 [R=301,L]
 
 
+RewriteEngine on  
+RewriteBase /
 
+RewriteCond %{THE_REQUEST} (.*)\.php  
+RewriteRule ^(.*)\.php $1.html [R=301,L]  
+
+RewriteCond %{THE_REQUEST} (.*)\.html  
+RewriteRule ^(.*)\.html $1.php [L]  
 php_value date.timezone 'Asia/Tashkent'
 

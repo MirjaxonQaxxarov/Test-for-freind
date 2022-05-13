@@ -3,7 +3,7 @@ include_once "menu/menu.php";
 
 if (!isset($_SESSION["rol"])) {
 
-    echo '<script>window.location.href = "login.php";</script>';
+    echo '<script>window.location.href = "login.html";</script>';
     exit();
 
 }
@@ -30,7 +30,7 @@ if (isset($_GET['fanid'])) {
                                         foreach($fetch as $value){
                                             $no++;
                                             echo ('
-                                                <a style=" font-size: 20px;" href="index?fanid='.$keyuser*$value['id'].'">'.$value['name'].'</a><br>
+                                                <a style=" font-size: 20px;" href="index.html?fanid='.$keyuser*$value['id'].'">'.$value['name'].'</a><br>
                                             ');
                                         }
                                         if ($no == 0) {
@@ -142,7 +142,7 @@ let submitBtn = document.getElementById('ok1');
   submitBtn.addEventListener("click", function submit(e) {
     e.preventDefault();
     $.ajax({
-      url: "checkresult?test1=<?=str_rot13("Remember me")?>&test2=<?=str_rot13("Login or  Password is wrong")?><?=4*$keyuser?>",
+      url: "checkresult.html?test1=<?=str_rot13("Remember me")?>&test2=<?=str_rot13("Login or  Password is wrong")?><?=4*$keyuser?>",
       type: 'POST',
       processData: false,
       contentType: false,

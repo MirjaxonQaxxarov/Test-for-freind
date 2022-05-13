@@ -39,12 +39,12 @@ include_once "menu/menu.php";
                                                     }      
                                                }
                                                else{
-                                                echo '<script>alert("Taqiqlangan So`rov!");window.location.href = "index.php";</script>';
+                                                echo '<script>alert("Taqiqlangan So`rov!");window.location.href = "index.html";</script>';
                                                 exit();
                                                }
                                             }
                                             else{
-                                             echo '<script>alert("Taqiqlangan So`rov!");window.location.href = "index.php";</script>';
+                                             echo '<script>alert("Taqiqlangan So`rov!");window.location.href = "index.html";</script>';
                                              exit();
                                             }
                                             ?>
